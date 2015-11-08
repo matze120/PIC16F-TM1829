@@ -1,0 +1,1705 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.35 build -356382666 
+                                                                                               Sat Oct 31 19:39:52 2015
+
+Microchip Technology Omniscient Code Generator v1.35 (Free mode) build 201507080246
+     1                           	processor	16F887
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataBANK0,global,class=CODE,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+     7                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	inittext,global,class=CODE,delta=2
+     9                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    10                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    11                           	psect	maintext,global,class=CODE,split=1,delta=2
+    12                           	psect	text1,local,class=CODE,merge=1,delta=2
+    13                           	psect	text2,local,class=CODE,merge=1,delta=2
+    14                           	psect	text3,local,class=CODE,merge=1,delta=2
+    15                           	psect	text4,local,class=CODE,merge=1,delta=2
+    16                           	psect	text5,local,class=CODE,merge=1,delta=2
+    17                           	psect	text6,local,class=CODE,merge=1,delta=2
+    18                           	psect	text7,local,class=CODE,merge=1,delta=2
+    19                           	psect	text8,local,class=CODE,merge=1,delta=2
+    20                           	dabs	1,0x7E,2
+    21  0000                     	;# 
+    22  0001                     	;# 
+    23  0002                     	;# 
+    24  0003                     	;# 
+    25  0004                     	;# 
+    26  0005                     	;# 
+    27  0006                     	;# 
+    28  0007                     	;# 
+    29  0008                     	;# 
+    30  0009                     	;# 
+    31  000A                     	;# 
+    32  000B                     	;# 
+    33  000C                     	;# 
+    34  000D                     	;# 
+    35  000E                     	;# 
+    36  000E                     	;# 
+    37  000F                     	;# 
+    38  0010                     	;# 
+    39  0011                     	;# 
+    40  0012                     	;# 
+    41  0013                     	;# 
+    42  0014                     	;# 
+    43  0015                     	;# 
+    44  0015                     	;# 
+    45  0016                     	;# 
+    46  0017                     	;# 
+    47  0018                     	;# 
+    48  0019                     	;# 
+    49  001A                     	;# 
+    50  001B                     	;# 
+    51  001B                     	;# 
+    52  001C                     	;# 
+    53  001D                     	;# 
+    54  001E                     	;# 
+    55  001F                     	;# 
+    56  0081                     	;# 
+    57  0085                     	;# 
+    58  0086                     	;# 
+    59  0087                     	;# 
+    60  0088                     	;# 
+    61  0089                     	;# 
+    62  008C                     	;# 
+    63  008D                     	;# 
+    64  008E                     	;# 
+    65  008F                     	;# 
+    66  0090                     	;# 
+    67  0091                     	;# 
+    68  0092                     	;# 
+    69  0093                     	;# 
+    70  0093                     	;# 
+    71  0093                     	;# 
+    72  0094                     	;# 
+    73  0095                     	;# 
+    74  0096                     	;# 
+    75  0097                     	;# 
+    76  0098                     	;# 
+    77  0099                     	;# 
+    78  009A                     	;# 
+    79  009B                     	;# 
+    80  009C                     	;# 
+    81  009D                     	;# 
+    82  009E                     	;# 
+    83  009F                     	;# 
+    84  0105                     	;# 
+    85  0107                     	;# 
+    86  0108                     	;# 
+    87  0109                     	;# 
+    88  010C                     	;# 
+    89  010C                     	;# 
+    90  010D                     	;# 
+    91  010E                     	;# 
+    92  010F                     	;# 
+    93  0185                     	;# 
+    94  0187                     	;# 
+    95  0188                     	;# 
+    96  0189                     	;# 
+    97  018C                     	;# 
+    98  018D                     	;# 
+    99                           
+   100                           	psect	idataBANK0
+   101  056B                     __pidataBANK0:	
+   102                           
+   103                           ;initializer for _LEDData
+   104  056B  34FF               	retlw	255
+   105  056C  3400               	retlw	0
+   106  056D  3400               	retlw	0
+   107  056E  3400               	retlw	0
+   108  056F  3400               	retlw	0
+   109  0570  3400               	retlw	0
+   110  0571  3400               	retlw	0
+   111  0572  3400               	retlw	0
+   112  0573  34FF               	retlw	255
+   113  0574  3400               	retlw	0
+   114  0575  3400               	retlw	0
+   115  0576  3400               	retlw	0
+   116  0577  3400               	retlw	0
+   117  0578  3400               	retlw	0
+   118  0579  3400               	retlw	0
+   119  057A  3400               	retlw	0
+   120  057B  34FF               	retlw	255
+   121  057C  3400               	retlw	0
+   122  057D  34FF               	retlw	255
+   123  057E  3400               	retlw	0
+   124  057F  3400               	retlw	0
+   125  0580  3400               	retlw	0
+   126  0581  3400               	retlw	0
+   127  0582  3400               	retlw	0
+   128  0583  3400               	retlw	0
+   129  0584  3400               	retlw	0
+   130  0585  34FF               	retlw	255
+   131  0586  3400               	retlw	0
+   132  0587  3400               	retlw	0
+   133  0588  3400               	retlw	0
+   134  0589  3400               	retlw	0
+   135  058A  3400               	retlw	0
+   136  058B  3400               	retlw	0
+   137  058C  3400               	retlw	0
+   138  058D  34FF               	retlw	255
+   139  058E  3400               	retlw	0
+   140  005F                     _GIE	set	95
+   141  0040                     _RD0	set	64
+   142  0440                     _TRISD0	set	1088
+   143                           
+   144                           ; #config settings
+   145  0000                     
+   146                           	psect	cinit
+   147  07EF                     start_initialization:	
+   148  07EF                     __initialization:	
+   149                           
+   150                           ; Clear objects allocated to BANK0
+   151  07EF  01DD               	clrf	__pbssBANK0& (0+127)
+   152                           
+   153                           ; Initialize objects allocated to BANK0
+   154  07F0  1383               	bcf	3,7	;select IRP bank0
+   155  07F1  3044               	movlw	low (__pdataBANK0+36)
+   156  07F2  00FD               	movwf	btemp+-1
+   157  07F3  3005               	movlw	high __pidataBANK0
+   158  07F4  00FE               	movwf	btemp
+   159  07F5  306B               	movlw	low __pidataBANK0
+   160  07F6  00FF               	movwf	btemp+1
+   161  07F7  3020               	movlw	low __pdataBANK0
+   162  07F8  0084               	movwf	4
+   163  07F9  120A  118A  2528   	fcall	init_ram0
+   164  07FC                     end_of_initialization:	
+   165                           ;End of C runtime variable initialization code
+   166                           
+   167  07FC                     __end_of__initialization:	
+   168  07FC  0183               	clrf	3
+   169  07FD  120A  118A  2DD8   	ljmp	_main	;jump to C main() function
+   170                           
+   171                           	psect	bssBANK0
+   172  005D                     __pbssBANK0:	
+   173  005D                     _i:	
+   174  005D                     	ds	1
+   175                           
+   176                           	psect	dataBANK0
+   177  0020                     __pdataBANK0:	
+   178  0020                     _LEDData:	
+   179  0020                     	ds	36
+   180                           
+   181                           	psect	inittext
+   182  0524                     init_fetch0:	
+   183                           ;	Called with low address in FSR and high address in W
+   184                           
+   185  0524  087E               	movf	126,w
+   186  0525  008A               	movwf	10
+   187  0526  087F               	movf	127,w
+   188  0527  0082               	movwf	2
+   189  0528                     init_ram0:	
+   190                           ;Called with:
+   191                           ;	high address of idata address in btemp 
+   192                           ;	low address of idata address in btemp+1 
+   193                           ;	low address of data in FSR
+   194                           ;	high address + 1 of data in btemp-1
+   195                           
+   196  0528  2524  120A  118A   	fcall	init_fetch0
+   197  052B  0080               	movwf	0
+   198  052C  0A84               	incf	4,f
+   199  052D  0804               	movf	4,w
+   200  052E  067D               	xorwf	125,w
+   201  052F  1903               	btfsc	3,2
+   202  0530  3400               	retlw	0
+   203  0531  0AFF               	incf	127,f
+   204  0532  1903               	btfsc	3,2
+   205  0533  0AFE               	incf	126,f
+   206  0534  2D28               	goto	init_ram0
+   207                           
+   208                           	psect	cstackCOMMON
+   209  0071                     __pcstackCOMMON:	
+   210  0071                     ?_wait_ms:	
+   211  0071                     ?__0:	
+   212                           ; 0 bytes @ 0x0
+   213                           
+   214  0071                     ??__0:	
+   215                           ; 0 bytes @ 0x0
+   216                           
+   217  0071                     ?__1:	
+   218                           ; 0 bytes @ 0x0
+   219                           
+   220  0071                     ??__1:	
+   221                           ; 0 bytes @ 0x0
+   222                           
+   223  0071                     ?_initLED:	
+   224                           ; 0 bytes @ 0x0
+   225                           
+   226  0071                     ??_initLED:	
+   227                           ; 0 bytes @ 0x0
+   228                           
+   229  0071                     ?_sendBit:	
+   230                           ; 0 bytes @ 0x0
+   231                           
+   232  0071                     ??_sendBit:	
+   233                           ; 0 bytes @ 0x0
+   234                           
+   235  0071                     ?_main:	
+   236                           ; 0 bytes @ 0x0
+   237                           
+   238  0071                     ?___bmul:	
+   239                           ; 0 bytes @ 0x0
+   240                           
+   241  0071                     sendBit@HL:	
+   242                           ; 1 bytes @ 0x0
+   243                           
+   244  0071                     sendLEDData@LED:	
+   245                           ; 1 bytes @ 0x0
+   246                           
+   247  0071                     ___bmul@multiplicand:	
+   248                           ; 1 bytes @ 0x0
+   249                           
+   250  0071                     wait_ms@time:	
+   251                           ; 1 bytes @ 0x0
+   252                           
+   253                           
+   254                           ; 2 bytes @ 0x0
+   255  0071                     	ds	1
+   256  0072                     ??___bmul:	
+   257                           
+   258                           ; 0 bytes @ 0x1
+   259  0072                     	ds	1
+   260  0073                     ??_wait_ms:	
+   261  0073                     ___bmul@product:	
+   262                           ; 0 bytes @ 0x2
+   263                           
+   264                           
+   265                           ; 1 bytes @ 0x2
+   266  0073                     	ds	1
+   267  0074                     ___bmul@multiplier:	
+   268                           
+   269                           ; 1 bytes @ 0x3
+   270  0074                     	ds	1
+   271  0075                     ?_sendRGB:	
+   272  0075                     sendRGB@green:	
+   273                           ; 0 bytes @ 0x4
+   274                           
+   275  0075                     wait_ms@Ti:	
+   276                           ; 1 bytes @ 0x4
+   277                           
+   278                           
+   279                           ; 2 bytes @ 0x4
+   280  0075                     	ds	1
+   281  0076                     sendRGB@blue:	
+   282                           
+   283                           ; 1 bytes @ 0x5
+   284  0076                     	ds	1
+   285  0077                     ??_sendRGB:	
+   286                           
+   287                           ; 0 bytes @ 0x6
+   288  0077                     	ds	1
+   289  0078                     ?_sendLEDData:	
+   290  0078                     sendLEDData@LEDNumber:	
+   291                           ; 0 bytes @ 0x7
+   292                           
+   293                           
+   294                           ; 1 bytes @ 0x7
+   295  0078                     	ds	1
+   296  0079                     ??_sendLEDData:	
+   297                           
+   298                           ; 0 bytes @ 0x8
+   299  0079                     	ds	5
+   300                           
+   301                           	psect	cstackBANK0
+   302  0044                     __pcstackBANK0:	
+   303  0044                     _sendRGB$46:	
+   304                           
+   305                           ; 1 bytes @ 0x0
+   306  0044                     	ds	1
+   307  0045                     _sendRGB$47:	
+   308                           
+   309                           ; 1 bytes @ 0x1
+   310  0045                     	ds	1
+   311  0046                     _sendRGB$48:	
+   312                           
+   313                           ; 1 bytes @ 0x2
+   314  0046                     	ds	1
+   315  0047                     _sendRGB$49:	
+   316                           
+   317                           ; 1 bytes @ 0x3
+   318  0047                     	ds	1
+   319  0048                     _sendRGB$50:	
+   320                           
+   321                           ; 1 bytes @ 0x4
+   322  0048                     	ds	1
+   323  0049                     _sendRGB$51:	
+   324                           
+   325                           ; 1 bytes @ 0x5
+   326  0049                     	ds	1
+   327  004A                     _sendRGB$52:	
+   328                           
+   329                           ; 1 bytes @ 0x6
+   330  004A                     	ds	1
+   331  004B                     _sendRGB$53:	
+   332                           
+   333                           ; 1 bytes @ 0x7
+   334  004B                     	ds	1
+   335  004C                     _sendRGB$54:	
+   336                           
+   337                           ; 1 bytes @ 0x8
+   338  004C                     	ds	1
+   339  004D                     _sendRGB$55:	
+   340                           
+   341                           ; 1 bytes @ 0x9
+   342  004D                     	ds	1
+   343  004E                     _sendRGB$56:	
+   344                           
+   345                           ; 1 bytes @ 0xA
+   346  004E                     	ds	1
+   347  004F                     _sendRGB$57:	
+   348                           
+   349                           ; 1 bytes @ 0xB
+   350  004F                     	ds	1
+   351  0050                     _sendRGB$58:	
+   352                           
+   353                           ; 1 bytes @ 0xC
+   354  0050                     	ds	1
+   355  0051                     _sendRGB$59:	
+   356                           
+   357                           ; 1 bytes @ 0xD
+   358  0051                     	ds	1
+   359  0052                     _sendRGB$60:	
+   360                           
+   361                           ; 1 bytes @ 0xE
+   362  0052                     	ds	1
+   363  0053                     _sendRGB$61:	
+   364                           
+   365                           ; 1 bytes @ 0xF
+   366  0053                     	ds	1
+   367  0054                     _sendRGB$62:	
+   368                           
+   369                           ; 1 bytes @ 0x10
+   370  0054                     	ds	1
+   371  0055                     _sendRGB$63:	
+   372                           
+   373                           ; 1 bytes @ 0x11
+   374  0055                     	ds	1
+   375  0056                     _sendRGB$64:	
+   376                           
+   377                           ; 1 bytes @ 0x12
+   378  0056                     	ds	1
+   379  0057                     _sendRGB$65:	
+   380                           
+   381                           ; 1 bytes @ 0x13
+   382  0057                     	ds	1
+   383  0058                     _sendRGB$66:	
+   384                           
+   385                           ; 1 bytes @ 0x14
+   386  0058                     	ds	1
+   387  0059                     sendRGB@red:	
+   388                           
+   389                           ; 1 bytes @ 0x15
+   390  0059                     	ds	1
+   391  005A                     sendLEDData@i:	
+   392                           
+   393                           ; 1 bytes @ 0x16
+   394  005A                     	ds	1
+   395  005B                     ??_main:	
+   396                           
+   397                           ; 0 bytes @ 0x17
+   398  005B                     	ds	2
+   399                           
+   400                           	psect	maintext
+   401  05D8                     __pmaintext:	
+   402 ;;
+   403 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   404 ;;
+   405 ;; *************** function _main *****************
+   406 ;; Defined at:
+   407 ;;		line 200 in file "WS_Chip.c"
+   408 ;; Parameters:    Size  Location     Type
+   409 ;;		None
+   410 ;; Auto vars:     Size  Location     Type
+   411 ;;		None
+   412 ;; Return value:  Size  Location     Type
+   413 ;;		None               void
+   414 ;; Registers used:
+   415 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   416 ;; Tracked objects:
+   417 ;;		On entry : B00/0
+   418 ;;		On exit  : 0/0
+   419 ;;		Unchanged: 0/0
+   420 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   421 ;;      Params:         0       0       0       0       0
+   422 ;;      Locals:         0       0       0       0       0
+   423 ;;      Temps:          0       2       0       0       0
+   424 ;;      Totals:         0       2       0       0       0
+   425 ;;Total ram usage:        2 bytes
+   426 ;; Hardware stack levels required when called:    3
+   427 ;; This function calls:
+   428 ;;		_initLED
+   429 ;;		_sendLEDData
+   430 ;;		_sendRGB
+   431 ;;		_wait_ms
+   432 ;; This function is called by:
+   433 ;;		Startup code after reset
+   434 ;; This function uses a non-reentrant model
+   435 ;;
+   436                           
+   437                           
+   438                           ;psect for function _main
+   439  05D8                     _main:	
+   440                           
+   441                           ;WS_Chip.c: 202: GIE = 0;
+   442                           
+   443                           ;incstack = 0
+   444                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   445  05D8  138B               	bcf	11,7	;volatile
+   446                           
+   447                           ;WS_Chip.c: 204: TRISD0 = 0;
+   448  05D9  1683               	bsf	3,5	;RP0=1, select bank1
+   449  05DA  1303               	bcf	3,6	;RP1=0, select bank1
+   450  05DB  1008               	bcf	8,0	;volatile
+   451                           
+   452                           ;WS_Chip.c: 205: RD0 = 1;
+   453  05DC  1283               	bcf	3,5	;RP0=0, select bank0
+   454  05DD  1303               	bcf	3,6	;RP1=0, select bank0
+   455  05DE  1408               	bsf	8,0	;volatile
+   456                           
+   457                           ;WS_Chip.c: 207: initLED();
+   458  05DF  120A  118A  263A  120A  118A  	fcall	_initLED
+   459                           
+   460                           ;WS_Chip.c: 209: _delay((unsigned long)((500)*(20000000/4000000.0)));
+   461  05E4  3004               	movlw	4
+   462  05E5  1283               	bcf	3,5	;RP0=0, select bank0
+   463  05E6  1303               	bcf	3,6	;RP1=0, select bank0
+   464  05E7  00DC               	movwf	??_main+1
+   465  05E8  303D               	movlw	61
+   466  05E9  00DB               	movwf	??_main
+   467  05EA                     u537:	
+   468  05EA  0BDB               	decfsz	??_main,f
+   469  05EB  2DEA               	goto	u537
+   470  05EC  0BDC               	decfsz	??_main+1,f
+   471  05ED  2DEA               	goto	u537
+   472  05EE  2DEF               	nop2
+   473                           
+   474                           ;WS_Chip.c: 365: sendLEDData(LEDData,3);
+   475  05EF  3003               	movlw	3
+   476  05F0  1283               	bcf	3,5	;RP0=0, select bank0
+   477  05F1  1303               	bcf	3,6	;RP1=0, select bank0
+   478  05F2  00DB               	movwf	??_main
+   479  05F3  085B               	movf	??_main,w
+   480  05F4  00F8               	movwf	sendLEDData@LEDNumber
+   481  05F5  3020               	movlw	(low _LEDData)& (0+255)
+   482  05F6  120A  118A  258F  120A  118A  	fcall	_sendLEDData
+   483                           
+   484                           ;WS_Chip.c: 367: wait_ms(500);
+   485  05FB  30F4               	movlw	244
+   486  05FC  00F1               	movwf	wait_ms@time
+   487  05FD  3001               	movlw	1
+   488  05FE  00F2               	movwf	wait_ms@time+1
+   489  05FF  120A  118A  2535  120A  118A  	fcall	_wait_ms
+   490                           
+   491                           ;WS_Chip.c: 368: sendRGB(0xff,0xff,0xff);
+   492  0604  30FF               	movlw	255
+   493  0605  1283               	bcf	3,5	;RP0=0, select bank0
+   494  0606  1303               	bcf	3,6	;RP1=0, select bank0
+   495  0607  00DB               	movwf	??_main
+   496  0608  085B               	movf	??_main,w
+   497  0609  00F5               	movwf	sendRGB@green
+   498  060A  30FF               	movlw	255
+   499  060B  00DC               	movwf	??_main+1
+   500  060C  085C               	movf	??_main+1,w
+   501  060D  00F6               	movwf	sendRGB@blue
+   502  060E  30FF               	movlw	255
+   503  060F  120A  118A  26B1  120A  118A  	fcall	_sendRGB
+   504                           
+   505                           ;WS_Chip.c: 369: wait_ms(5000);
+   506  0614  3088               	movlw	136
+   507  0615  00F1               	movwf	wait_ms@time
+   508  0616  3013               	movlw	19
+   509  0617  00F2               	movwf	wait_ms@time+1
+   510  0618  120A  118A  2535  120A  118A  	fcall	_wait_ms
+   511                           
+   512                           ;WS_Chip.c: 370: sendRGB(0x00,0x00,0x00);
+   513  061D  01F5               	clrf	sendRGB@green
+   514  061E  01F6               	clrf	sendRGB@blue
+   515  061F  3000               	movlw	0
+   516  0620  120A  118A  26B1  120A  118A  	fcall	_sendRGB
+   517                           
+   518                           ;WS_Chip.c: 375: LEDData[0][0] = 0x00;
+   519  0625  1283               	bcf	3,5	;RP0=0, select bank0
+   520  0626  1303               	bcf	3,6	;RP1=0, select bank0
+   521  0627  01A0               	clrf	_LEDData
+   522  0628  01A1               	clrf	_LEDData+1
+   523                           
+   524                           ;WS_Chip.c: 376: LEDData[0][1] = 0xff;
+   525  0629  30FF               	movlw	255
+   526  062A  00A2               	movwf	_LEDData+2
+   527  062B  3000               	movlw	0
+   528  062C  00A3               	movwf	_LEDData+3
+   529                           
+   530                           ;WS_Chip.c: 377: LEDData[0][2] = 0x00;
+   531  062D  01A4               	clrf	_LEDData+4
+   532  062E  01A5               	clrf	_LEDData+5
+   533                           
+   534                           ;WS_Chip.c: 386: sendLEDData(LEDData,3);
+   535  062F  3003               	movlw	3
+   536  0630  00DB               	movwf	??_main
+   537  0631  085B               	movf	??_main,w
+   538  0632  00F8               	movwf	sendLEDData@LEDNumber
+   539  0633  3020               	movlw	(low _LEDData)& (0+255)
+   540  0634  120A  118A  258F  120A  118A  	fcall	_sendLEDData
+   541  0639                     l86:	
+   542                           ;WS_Chip.c: 387: while(1)
+   543                           
+   544                           
+   545                           ;WS_Chip.c: 388: {
+   546  0639  2E39               	goto	l86
+   547  063A                     __end_of_main:	
+   548                           
+   549                           	psect	text1
+   550  0535                     __ptext1:	
+   551 ;; *************** function _wait_ms *****************
+   552 ;; Defined at:
+   553 ;;		line 66 in file "WS_Chip.c"
+   554 ;; Parameters:    Size  Location     Type
+   555 ;;  time            2    0[COMMON] unsigned int 
+   556 ;; Auto vars:     Size  Location     Type
+   557 ;;  Ti              2    4[COMMON] unsigned int 
+   558 ;; Return value:  Size  Location     Type
+   559 ;;		None               void
+   560 ;; Registers used:
+   561 ;;		wreg, status,2
+   562 ;; Tracked objects:
+   563 ;;		On entry : 0/0
+   564 ;;		On exit  : 0/0
+   565 ;;		Unchanged: 0/0
+   566 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   567 ;;      Params:         2       0       0       0       0
+   568 ;;      Locals:         2       0       0       0       0
+   569 ;;      Temps:          2       0       0       0       0
+   570 ;;      Totals:         6       0       0       0       0
+   571 ;;Total ram usage:        6 bytes
+   572 ;; Hardware stack levels used:    1
+   573 ;; This function calls:
+   574 ;;		Nothing
+   575 ;; This function is called by:
+   576 ;;		_main
+   577 ;; This function uses a non-reentrant model
+   578 ;;
+   579                           
+   580                           
+   581                           ;psect for function _wait_ms
+   582  0535                     _wait_ms:	
+   583  0535                     l15:	
+   584                           ;WS_Chip.c: 68: unsigned int Ti;
+   585                           ;WS_Chip.c: 69: while (time > Ti)
+   586                           
+   587                           ;incstack = 0
+   588                           ; Regs used in _wait_ms: [wreg+status,2]
+   589                           
+   590  0535  0872               	movf	wait_ms@time+1,w
+   591  0536  0276               	subwf	wait_ms@Ti+1,w
+   592  0537  1D03               	skipz
+   593  0538  2D3B               	goto	u515
+   594  0539  0871               	movf	wait_ms@time,w
+   595  053A  0275               	subwf	wait_ms@Ti,w
+   596  053B                     u515:	
+   597  053B  1803               	btfsc	3,0
+   598  053C  2D4C               	goto	l973
+   599                           
+   600                           ;WS_Chip.c: 70: {
+   601                           ;WS_Chip.c: 71: Ti++;
+   602  053D  3001               	movlw	1
+   603  053E  07F5               	addwf	wait_ms@Ti,f
+   604  053F  1803               	skipnc
+   605  0540  0AF6               	incf	wait_ms@Ti+1,f
+   606  0541  3000               	movlw	0
+   607  0542  07F6               	addwf	wait_ms@Ti+1,f
+   608                           
+   609                           ;WS_Chip.c: 72: _delay((unsigned long)((1000)*(20000000/4000000.0)));
+   610  0543  3007               	movlw	7
+   611  0544  00F4               	movwf	??_wait_ms+1
+   612  0545  307D               	movlw	125
+   613  0546  00F3               	movwf	??_wait_ms
+   614  0547                     u547:	
+   615  0547  0BF3               	decfsz	??_wait_ms,f
+   616  0548  2D47               	goto	u547
+   617  0549  0BF4               	decfsz	??_wait_ms+1,f
+   618  054A  2D47               	goto	u547
+   619  054B  2D35               	goto	l15
+   620  054C                     l973:	
+   621                           
+   622                           ;WS_Chip.c: 73: }
+   623                           ;WS_Chip.c: 75: Ti = 0;
+   624  054C  01F5               	clrf	wait_ms@Ti
+   625  054D  01F6               	clrf	wait_ms@Ti+1
+   626  054E  0008               	return
+   627  054F                     __end_of_wait_ms:	
+   628                           
+   629                           	psect	text2
+   630  058F                     __ptext2:	
+   631 ;; *************** function _sendLEDData *****************
+   632 ;; Defined at:
+   633 ;;		line 190 in file "WS_Chip.c"
+   634 ;; Parameters:    Size  Location     Type
+   635 ;;  LED             1    wreg     unsigned char 
+   636 ;;  LEDNumber       1    7[COMMON] unsigned char 
+   637 ;; Auto vars:     Size  Location     Type
+   638 ;;  LED             1    0[COMMON] unsigned char 
+   639 ;;  i               1   22[BANK0 ] unsigned char 
+   640 ;; Return value:  Size  Location     Type
+   641 ;;		None               void
+   642 ;; Registers used:
+   643 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   644 ;; Tracked objects:
+   645 ;;		On entry : 0/0
+   646 ;;		On exit  : 0/0
+   647 ;;		Unchanged: 0/0
+   648 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   649 ;;      Params:         1       0       0       0       0
+   650 ;;      Locals:         0       1       0       0       0
+   651 ;;      Temps:          5       0       0       0       0
+   652 ;;      Totals:         6       1       0       0       0
+   653 ;;Total ram usage:        7 bytes
+   654 ;; Hardware stack levels used:    1
+   655 ;; Hardware stack levels required when called:    2
+   656 ;; This function calls:
+   657 ;;		___bmul
+   658 ;;		_sendRGB
+   659 ;; This function is called by:
+   660 ;;		_main
+   661 ;; This function uses a non-reentrant model
+   662 ;;
+   663                           
+   664                           
+   665                           ;psect for function _sendLEDData
+   666  058F                     _sendLEDData:	
+   667                           
+   668                           ;WS_Chip.c: 192: unsigned char i = 0;
+   669                           
+   670                           ;incstack = 0
+   671                           ; Regs used in _sendLEDData: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   672  058F  1283               	bcf	3,5	;RP0=0, select bank0
+   673  0590  1303               	bcf	3,6	;RP1=0, select bank0
+   674  0591  01DA               	clrf	sendLEDData@i
+   675  0592                     l981:	
+   676                           ;WS_Chip.c: 193: while(LEDNumber > i)
+   677                           
+   678  0592  0878               	movf	sendLEDData@LEDNumber,w
+   679  0593  025A               	subwf	sendLEDData@i,w
+   680  0594  1803               	btfsc	3,0
+   681  0595  0008               	return
+   682                           
+   683                           ;WS_Chip.c: 194: {
+   684                           ;WS_Chip.c: 195: sendRGB(LEDData[i][0], LEDData[i][1], LEDData[i][2]);
+   685  0596  3006               	movlw	6
+   686  0597  00F9               	movwf	??_sendLEDData
+   687  0598  0879               	movf	??_sendLEDData,w
+   688  0599  00F1               	movwf	___bmul@multiplicand
+   689  059A  085A               	movf	sendLEDData@i,w
+   690  059B  120A  118A  2513  120A  118A  	fcall	___bmul
+   691  05A0  3E02               	addlw	2
+   692  05A1  3E20               	addlw	(low (_LEDData| 0))& (0+255)
+   693  05A2  0084               	movwf	4
+   694  05A3  1383               	bcf	3,7	;select IRP bank0
+   695  05A4  0800               	movf	0,w
+   696  05A5  00FA               	movwf	??_sendLEDData+1
+   697  05A6  087A               	movf	??_sendLEDData+1,w
+   698  05A7  00F5               	movwf	sendRGB@green
+   699  05A8  3006               	movlw	6
+   700  05A9  00FB               	movwf	??_sendLEDData+2
+   701  05AA  087B               	movf	??_sendLEDData+2,w
+   702  05AB  00F1               	movwf	___bmul@multiplicand
+   703  05AC  1283               	bcf	3,5	;RP0=0, select bank0
+   704  05AD  1303               	bcf	3,6	;RP1=0, select bank0
+   705  05AE  085A               	movf	sendLEDData@i,w
+   706  05AF  120A  118A  2513  120A  118A  	fcall	___bmul
+   707  05B4  3E04               	addlw	4
+   708  05B5  3E20               	addlw	(low (_LEDData| 0))& (0+255)
+   709  05B6  0084               	movwf	4
+   710  05B7  1383               	bcf	3,7	;select IRP bank0
+   711  05B8  0800               	movf	0,w
+   712  05B9  00FC               	movwf	??_sendLEDData+3
+   713  05BA  087C               	movf	??_sendLEDData+3,w
+   714  05BB  00F6               	movwf	sendRGB@blue
+   715  05BC  3006               	movlw	6
+   716  05BD  00FD               	movwf	??_sendLEDData+4
+   717  05BE  087D               	movf	??_sendLEDData+4,w
+   718  05BF  00F1               	movwf	___bmul@multiplicand
+   719  05C0  1283               	bcf	3,5	;RP0=0, select bank0
+   720  05C1  1303               	bcf	3,6	;RP1=0, select bank0
+   721  05C2  085A               	movf	sendLEDData@i,w
+   722  05C3  120A  118A  2513  120A  118A  	fcall	___bmul
+   723  05C8  3E20               	addlw	(low (_LEDData| 0))& (0+255)
+   724  05C9  0084               	movwf	4
+   725  05CA  1383               	bcf	3,7	;select IRP bank0
+   726  05CB  0800               	movf	0,w
+   727  05CC  120A  118A  26B1  120A  118A  	fcall	_sendRGB
+   728                           
+   729                           ;WS_Chip.c: 196: i++;
+   730  05D1  3001               	movlw	1
+   731  05D2  00F9               	movwf	??_sendLEDData
+   732  05D3  0879               	movf	??_sendLEDData,w
+   733  05D4  1283               	bcf	3,5	;RP0=0, select bank0
+   734  05D5  1303               	bcf	3,6	;RP1=0, select bank0
+   735  05D6  07DA               	addwf	sendLEDData@i,f
+   736  05D7  2D92               	goto	l981
+   737  05D8                     __end_of_sendLEDData:	
+   738                           
+   739                           	psect	text3
+   740  06B1                     __ptext3:	
+   741 ;; *************** function _sendRGB *****************
+   742 ;; Defined at:
+   743 ;;		line 158 in file "WS_Chip.c"
+   744 ;; Parameters:    Size  Location     Type
+   745 ;;  red             1    wreg     unsigned char 
+   746 ;;  green           1    4[COMMON] unsigned char 
+   747 ;;  blue            1    5[COMMON] unsigned char 
+   748 ;; Auto vars:     Size  Location     Type
+   749 ;;  red             1   21[BANK0 ] unsigned char 
+   750 ;; Return value:  Size  Location     Type
+   751 ;;		None               void
+   752 ;; Registers used:
+   753 ;;		wreg, status,2, status,0, pclath, cstack
+   754 ;; Tracked objects:
+   755 ;;		On entry : 0/0
+   756 ;;		On exit  : 0/0
+   757 ;;		Unchanged: 0/0
+   758 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   759 ;;      Params:         2       0       0       0       0
+   760 ;;      Locals:         0      22       0       0       0
+   761 ;;      Temps:          1       0       0       0       0
+   762 ;;      Totals:         3      22       0       0       0
+   763 ;;Total ram usage:       25 bytes
+   764 ;; Hardware stack levels used:    1
+   765 ;; Hardware stack levels required when called:    1
+   766 ;; This function calls:
+   767 ;;		_sendBit
+   768 ;; This function is called by:
+   769 ;;		_sendLEDData
+   770 ;;		_main
+   771 ;; This function uses a non-reentrant model
+   772 ;;
+   773                           
+   774                           
+   775                           ;psect for function _sendRGB
+   776  06B1                     _sendRGB:	
+   777                           
+   778                           ;incstack = 0
+   779                           ; Regs used in _sendRGB: [wreg+status,2+status,0+pclath+cstack]
+   780                           ;sendRGB@red stored from wreg
+   781  06B1  1283               	bcf	3,5	;RP0=0, select bank0
+   782  06B2  1303               	bcf	3,6	;RP1=0, select bank0
+   783  06B3  00D9               	movwf	sendRGB@red
+   784                           
+   785                           ;WS_Chip.c: 160: sendBit(red && 0b10000000);
+   786  06B4  01C4               	clrf	_sendRGB$46
+   787  06B5  0859               	movf	sendRGB@red,w
+   788  06B6  1903               	btfsc	3,2
+   789  06B7  2EBA               	goto	l791
+   790  06B8  01C4               	clrf	_sendRGB$46
+   791  06B9  0AC4               	incf	_sendRGB$46,f
+   792  06BA                     l791:	
+   793  06BA  0844               	movf	_sendRGB$46,w
+   794  06BB  120A  118A  254F  120A  118A  	fcall	_sendBit
+   795                           
+   796                           ;WS_Chip.c: 161: sendBit(red && 0b01000000);
+   797  06C0  1283               	bcf	3,5	;RP0=0, select bank0
+   798  06C1  1303               	bcf	3,6	;RP1=0, select bank0
+   799  06C2  01C5               	clrf	_sendRGB$47
+   800  06C3  0859               	movf	sendRGB@red,w
+   801  06C4  1903               	btfsc	3,2
+   802  06C5  2EC8               	goto	l799
+   803  06C6  01C5               	clrf	_sendRGB$47
+   804  06C7  0AC5               	incf	_sendRGB$47,f
+   805  06C8                     l799:	
+   806  06C8  0845               	movf	_sendRGB$47,w
+   807  06C9  120A  118A  254F  120A  118A  	fcall	_sendBit
+   808                           
+   809                           ;WS_Chip.c: 162: sendBit(red && 0b00100000);
+   810  06CE  1283               	bcf	3,5	;RP0=0, select bank0
+   811  06CF  1303               	bcf	3,6	;RP1=0, select bank0
+   812  06D0  01C6               	clrf	_sendRGB$48
+   813  06D1  0859               	movf	sendRGB@red,w
+   814  06D2  1903               	btfsc	3,2
+   815  06D3  2ED6               	goto	l807
+   816  06D4  01C6               	clrf	_sendRGB$48
+   817  06D5  0AC6               	incf	_sendRGB$48,f
+   818  06D6                     l807:	
+   819  06D6  0846               	movf	_sendRGB$48,w
+   820  06D7  120A  118A  254F  120A  118A  	fcall	_sendBit
+   821                           
+   822                           ;WS_Chip.c: 163: sendBit(red && 0b00010000);
+   823  06DC  1283               	bcf	3,5	;RP0=0, select bank0
+   824  06DD  1303               	bcf	3,6	;RP1=0, select bank0
+   825  06DE  01C7               	clrf	_sendRGB$49
+   826  06DF  0859               	movf	sendRGB@red,w
+   827  06E0  1903               	btfsc	3,2
+   828  06E1  2EE4               	goto	l815
+   829  06E2  01C7               	clrf	_sendRGB$49
+   830  06E3  0AC7               	incf	_sendRGB$49,f
+   831  06E4                     l815:	
+   832  06E4  0847               	movf	_sendRGB$49,w
+   833  06E5  120A  118A  254F  120A  118A  	fcall	_sendBit
+   834                           
+   835                           ;WS_Chip.c: 164: sendBit(red && 0b00001000);
+   836  06EA  1283               	bcf	3,5	;RP0=0, select bank0
+   837  06EB  1303               	bcf	3,6	;RP1=0, select bank0
+   838  06EC  01C8               	clrf	_sendRGB$50
+   839  06ED  0859               	movf	sendRGB@red,w
+   840  06EE  1903               	btfsc	3,2
+   841  06EF  2EF2               	goto	l823
+   842  06F0  01C8               	clrf	_sendRGB$50
+   843  06F1  0AC8               	incf	_sendRGB$50,f
+   844  06F2                     l823:	
+   845  06F2  0848               	movf	_sendRGB$50,w
+   846  06F3  120A  118A  254F  120A  118A  	fcall	_sendBit
+   847                           
+   848                           ;WS_Chip.c: 165: sendBit(red && 0b00000100);
+   849  06F8  1283               	bcf	3,5	;RP0=0, select bank0
+   850  06F9  1303               	bcf	3,6	;RP1=0, select bank0
+   851  06FA  01C9               	clrf	_sendRGB$51
+   852  06FB  0859               	movf	sendRGB@red,w
+   853  06FC  1903               	btfsc	3,2
+   854  06FD  2F00               	goto	l831
+   855  06FE  01C9               	clrf	_sendRGB$51
+   856  06FF  0AC9               	incf	_sendRGB$51,f
+   857  0700                     l831:	
+   858  0700  0849               	movf	_sendRGB$51,w
+   859  0701  120A  118A  254F  120A  118A  	fcall	_sendBit
+   860                           
+   861                           ;WS_Chip.c: 166: sendBit(red && 0b00000010);
+   862  0706  1283               	bcf	3,5	;RP0=0, select bank0
+   863  0707  1303               	bcf	3,6	;RP1=0, select bank0
+   864  0708  01CA               	clrf	_sendRGB$52
+   865  0709  0859               	movf	sendRGB@red,w
+   866  070A  1903               	btfsc	3,2
+   867  070B  2F0E               	goto	l839
+   868  070C  01CA               	clrf	_sendRGB$52
+   869  070D  0ACA               	incf	_sendRGB$52,f
+   870  070E                     l839:	
+   871  070E  084A               	movf	_sendRGB$52,w
+   872  070F  120A  118A  254F  120A  118A  	fcall	_sendBit
+   873                           
+   874                           ;WS_Chip.c: 167: sendBit(0);
+   875  0714  3000               	movlw	0
+   876  0715  120A  118A  254F  120A  118A  	fcall	_sendBit
+   877                           
+   878                           ;WS_Chip.c: 169: sendBit(green && 0b10000000);
+   879  071A  1283               	bcf	3,5	;RP0=0, select bank0
+   880  071B  1303               	bcf	3,6	;RP1=0, select bank0
+   881  071C  01CB               	clrf	_sendRGB$53
+   882  071D  0875               	movf	sendRGB@green,w
+   883  071E  1903               	btfsc	3,2
+   884  071F  2F22               	goto	l847
+   885  0720  01CB               	clrf	_sendRGB$53
+   886  0721  0ACB               	incf	_sendRGB$53,f
+   887  0722                     l847:	
+   888  0722  084B               	movf	_sendRGB$53,w
+   889  0723  120A  118A  254F  120A  118A  	fcall	_sendBit
+   890                           
+   891                           ;WS_Chip.c: 170: sendBit(green && 0b01000000);
+   892  0728  1283               	bcf	3,5	;RP0=0, select bank0
+   893  0729  1303               	bcf	3,6	;RP1=0, select bank0
+   894  072A  01CC               	clrf	_sendRGB$54
+   895  072B  0875               	movf	sendRGB@green,w
+   896  072C  1903               	btfsc	3,2
+   897  072D  2F30               	goto	l855
+   898  072E  01CC               	clrf	_sendRGB$54
+   899  072F  0ACC               	incf	_sendRGB$54,f
+   900  0730                     l855:	
+   901  0730  084C               	movf	_sendRGB$54,w
+   902  0731  120A  118A  254F  120A  118A  	fcall	_sendBit
+   903                           
+   904                           ;WS_Chip.c: 171: sendBit(green && 0b00100000);
+   905  0736  1283               	bcf	3,5	;RP0=0, select bank0
+   906  0737  1303               	bcf	3,6	;RP1=0, select bank0
+   907  0738  01CD               	clrf	_sendRGB$55
+   908  0739  0875               	movf	sendRGB@green,w
+   909  073A  1903               	btfsc	3,2
+   910  073B  2F3E               	goto	l863
+   911  073C  01CD               	clrf	_sendRGB$55
+   912  073D  0ACD               	incf	_sendRGB$55,f
+   913  073E                     l863:	
+   914  073E  084D               	movf	_sendRGB$55,w
+   915  073F  120A  118A  254F  120A  118A  	fcall	_sendBit
+   916                           
+   917                           ;WS_Chip.c: 172: sendBit(green && 0b00010000);
+   918  0744  1283               	bcf	3,5	;RP0=0, select bank0
+   919  0745  1303               	bcf	3,6	;RP1=0, select bank0
+   920  0746  01CE               	clrf	_sendRGB$56
+   921  0747  0875               	movf	sendRGB@green,w
+   922  0748  1903               	btfsc	3,2
+   923  0749  2F4C               	goto	l871
+   924  074A  01CE               	clrf	_sendRGB$56
+   925  074B  0ACE               	incf	_sendRGB$56,f
+   926  074C                     l871:	
+   927  074C  084E               	movf	_sendRGB$56,w
+   928  074D  120A  118A  254F  120A  118A  	fcall	_sendBit
+   929                           
+   930                           ;WS_Chip.c: 173: sendBit(green && 0b00001000);
+   931  0752  1283               	bcf	3,5	;RP0=0, select bank0
+   932  0753  1303               	bcf	3,6	;RP1=0, select bank0
+   933  0754  01CF               	clrf	_sendRGB$57
+   934  0755  0875               	movf	sendRGB@green,w
+   935  0756  1903               	btfsc	3,2
+   936  0757  2F5A               	goto	l879
+   937  0758  01CF               	clrf	_sendRGB$57
+   938  0759  0ACF               	incf	_sendRGB$57,f
+   939  075A                     l879:	
+   940  075A  084F               	movf	_sendRGB$57,w
+   941  075B  120A  118A  254F  120A  118A  	fcall	_sendBit
+   942                           
+   943                           ;WS_Chip.c: 174: sendBit(green && 0b00000100);
+   944  0760  1283               	bcf	3,5	;RP0=0, select bank0
+   945  0761  1303               	bcf	3,6	;RP1=0, select bank0
+   946  0762  01D0               	clrf	_sendRGB$58
+   947  0763  0875               	movf	sendRGB@green,w
+   948  0764  1903               	btfsc	3,2
+   949  0765  2F68               	goto	l887
+   950  0766  01D0               	clrf	_sendRGB$58
+   951  0767  0AD0               	incf	_sendRGB$58,f
+   952  0768                     l887:	
+   953  0768  0850               	movf	_sendRGB$58,w
+   954  0769  120A  118A  254F  120A  118A  	fcall	_sendBit
+   955                           
+   956                           ;WS_Chip.c: 175: sendBit(green && 0b00000010);
+   957  076E  1283               	bcf	3,5	;RP0=0, select bank0
+   958  076F  1303               	bcf	3,6	;RP1=0, select bank0
+   959  0770  01D1               	clrf	_sendRGB$59
+   960  0771  0875               	movf	sendRGB@green,w
+   961  0772  1903               	btfsc	3,2
+   962  0773  2F76               	goto	l895
+   963  0774  01D1               	clrf	_sendRGB$59
+   964  0775  0AD1               	incf	_sendRGB$59,f
+   965  0776                     l895:	
+   966  0776  0851               	movf	_sendRGB$59,w
+   967  0777  120A  118A  254F  120A  118A  	fcall	_sendBit
+   968                           
+   969                           ;WS_Chip.c: 176: sendBit(0);
+   970  077C  3000               	movlw	0
+   971  077D  120A  118A  254F  120A  118A  	fcall	_sendBit
+   972                           
+   973                           ;WS_Chip.c: 178: sendBit(blue && 0b10000000);
+   974  0782  1283               	bcf	3,5	;RP0=0, select bank0
+   975  0783  1303               	bcf	3,6	;RP1=0, select bank0
+   976  0784  01D2               	clrf	_sendRGB$60
+   977  0785  0876               	movf	sendRGB@blue,w
+   978  0786  1903               	btfsc	3,2
+   979  0787  2F8A               	goto	l903
+   980  0788  01D2               	clrf	_sendRGB$60
+   981  0789  0AD2               	incf	_sendRGB$60,f
+   982  078A                     l903:	
+   983  078A  0852               	movf	_sendRGB$60,w
+   984  078B  120A  118A  254F  120A  118A  	fcall	_sendBit
+   985                           
+   986                           ;WS_Chip.c: 179: sendBit(blue && 0b01000000);
+   987  0790  1283               	bcf	3,5	;RP0=0, select bank0
+   988  0791  1303               	bcf	3,6	;RP1=0, select bank0
+   989  0792  01D3               	clrf	_sendRGB$61
+   990  0793  0876               	movf	sendRGB@blue,w
+   991  0794  1903               	btfsc	3,2
+   992  0795  2F98               	goto	l911
+   993  0796  01D3               	clrf	_sendRGB$61
+   994  0797  0AD3               	incf	_sendRGB$61,f
+   995  0798                     l911:	
+   996  0798  0853               	movf	_sendRGB$61,w
+   997  0799  120A  118A  254F  120A  118A  	fcall	_sendBit
+   998                           
+   999                           ;WS_Chip.c: 180: sendBit(blue && 0b00100000);
+  1000  079E  1283               	bcf	3,5	;RP0=0, select bank0
+  1001  079F  1303               	bcf	3,6	;RP1=0, select bank0
+  1002  07A0  01D4               	clrf	_sendRGB$62
+  1003  07A1  0876               	movf	sendRGB@blue,w
+  1004  07A2  1903               	btfsc	3,2
+  1005  07A3  2FA6               	goto	l919
+  1006  07A4  01D4               	clrf	_sendRGB$62
+  1007  07A5  0AD4               	incf	_sendRGB$62,f
+  1008  07A6                     l919:	
+  1009  07A6  0854               	movf	_sendRGB$62,w
+  1010  07A7  120A  118A  254F  120A  118A  	fcall	_sendBit
+  1011                           
+  1012                           ;WS_Chip.c: 181: sendBit(blue && 0b00010000);
+  1013  07AC  1283               	bcf	3,5	;RP0=0, select bank0
+  1014  07AD  1303               	bcf	3,6	;RP1=0, select bank0
+  1015  07AE  01D5               	clrf	_sendRGB$63
+  1016  07AF  0876               	movf	sendRGB@blue,w
+  1017  07B0  1903               	btfsc	3,2
+  1018  07B1  2FB4               	goto	l927
+  1019  07B2  01D5               	clrf	_sendRGB$63
+  1020  07B3  0AD5               	incf	_sendRGB$63,f
+  1021  07B4                     l927:	
+  1022  07B4  0855               	movf	_sendRGB$63,w
+  1023  07B5  120A  118A  254F  120A  118A  	fcall	_sendBit
+  1024                           
+  1025                           ;WS_Chip.c: 182: sendBit(blue && 0b00001000);
+  1026  07BA  1283               	bcf	3,5	;RP0=0, select bank0
+  1027  07BB  1303               	bcf	3,6	;RP1=0, select bank0
+  1028  07BC  01D6               	clrf	_sendRGB$64
+  1029  07BD  0876               	movf	sendRGB@blue,w
+  1030  07BE  1903               	btfsc	3,2
+  1031  07BF  2FC2               	goto	l935
+  1032  07C0  01D6               	clrf	_sendRGB$64
+  1033  07C1  0AD6               	incf	_sendRGB$64,f
+  1034  07C2                     l935:	
+  1035  07C2  0856               	movf	_sendRGB$64,w
+  1036  07C3  120A  118A  254F  120A  118A  	fcall	_sendBit
+  1037                           
+  1038                           ;WS_Chip.c: 183: sendBit(blue && 0b00000100);
+  1039  07C8  1283               	bcf	3,5	;RP0=0, select bank0
+  1040  07C9  1303               	bcf	3,6	;RP1=0, select bank0
+  1041  07CA  01D7               	clrf	_sendRGB$65
+  1042  07CB  0876               	movf	sendRGB@blue,w
+  1043  07CC  1903               	btfsc	3,2
+  1044  07CD  2FD0               	goto	l943
+  1045  07CE  01D7               	clrf	_sendRGB$65
+  1046  07CF  0AD7               	incf	_sendRGB$65,f
+  1047  07D0                     l943:	
+  1048  07D0  0857               	movf	_sendRGB$65,w
+  1049  07D1  120A  118A  254F  120A  118A  	fcall	_sendBit
+  1050                           
+  1051                           ;WS_Chip.c: 184: sendBit(blue && 0b00000010);
+  1052  07D6  1283               	bcf	3,5	;RP0=0, select bank0
+  1053  07D7  1303               	bcf	3,6	;RP1=0, select bank0
+  1054  07D8  01D8               	clrf	_sendRGB$66
+  1055  07D9  0876               	movf	sendRGB@blue,w
+  1056  07DA  1903               	btfsc	3,2
+  1057  07DB  2FDE               	goto	l951
+  1058  07DC  01D8               	clrf	_sendRGB$66
+  1059  07DD  0AD8               	incf	_sendRGB$66,f
+  1060  07DE                     l951:	
+  1061  07DE  0858               	movf	_sendRGB$66,w
+  1062  07DF  120A  118A  254F  120A  118A  	fcall	_sendBit
+  1063                           
+  1064                           ;WS_Chip.c: 185: sendBit(0);
+  1065  07E4  3000               	movlw	0
+  1066  07E5  120A  118A  254F  120A  118A  	fcall	_sendBit
+  1067                           
+  1068                           ;WS_Chip.c: 187: _delay((unsigned long)((50)*(20000000/4000000.0)));
+  1069  07EA  3053               	movlw	83
+  1070  07EB  00F7               	movwf	??_sendRGB
+  1071  07EC                     u557:	
+  1072  07EC  0BF7               	decfsz	??_sendRGB,f
+  1073  07ED  2FEC               	goto	u557
+  1074  07EE  0008               	return
+  1075  07EF                     __end_of_sendRGB:	
+  1076                           
+  1077                           	psect	text4
+  1078  054F                     __ptext4:	
+  1079 ;; *************** function _sendBit *****************
+  1080 ;; Defined at:
+  1081 ;;		line 133 in file "WS_Chip.c"
+  1082 ;; Parameters:    Size  Location     Type
+  1083 ;;  HL              1    wreg     unsigned char 
+  1084 ;; Auto vars:     Size  Location     Type
+  1085 ;;  HL              1    0[COMMON] unsigned char 
+  1086 ;; Return value:  Size  Location     Type
+  1087 ;;		None               void
+  1088 ;; Registers used:
+  1089 ;;		wreg, status,2, status,0
+  1090 ;; Tracked objects:
+  1091 ;;		On entry : 0/0
+  1092 ;;		On exit  : 0/0
+  1093 ;;		Unchanged: 0/0
+  1094 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1095 ;;      Params:         0       0       0       0       0
+  1096 ;;      Locals:         1       0       0       0       0
+  1097 ;;      Temps:          0       0       0       0       0
+  1098 ;;      Totals:         1       0       0       0       0
+  1099 ;;Total ram usage:        1 bytes
+  1100 ;; Hardware stack levels used:    1
+  1101 ;; This function calls:
+  1102 ;;		Nothing
+  1103 ;; This function is called by:
+  1104 ;;		_sendRGB
+  1105 ;; This function uses a non-reentrant model
+  1106 ;;
+  1107                           
+  1108                           
+  1109                           ;psect for function _sendBit
+  1110  054F                     _sendBit:	
+  1111                           
+  1112                           ;incstack = 0
+  1113                           ; Regs used in _sendBit: [wreg+status,2+status,0]
+  1114                           ;sendBit@HL stored from wreg
+  1115  054F  00F1               	movwf	sendBit@HL
+  1116                           
+  1117                           ;WS_Chip.c: 135: if(HL == 1)
+  1118  0550  0371               	decf	sendBit@HL,w
+  1119  0551  1D03               	btfss	3,2
+  1120  0552  2D62               	goto	l30
+  1121                           
+  1122                           ;WS_Chip.c: 136: {
+  1123                           ;WS_Chip.c: 137: RD0 = 0;
+  1124  0553  1283               	bcf	3,5	;RP0=0, select bank0
+  1125  0554  1303               	bcf	3,6	;RP1=0, select bank0
+  1126  0555  1008               	bcf	8,0	;volatile
+  1127                           
+  1128                           ;WS_Chip.c: 138: RD0 = 0;
+  1129  0556  1008               	bcf	8,0	;volatile
+  1130                           
+  1131                           ;WS_Chip.c: 139: RD0 = 0;
+  1132  0557  1008               	bcf	8,0	;volatile
+  1133                           
+  1134                           ;WS_Chip.c: 140: RD0 = 0;
+  1135  0558  1008               	bcf	8,0	;volatile
+  1136                           
+  1137                           ;WS_Chip.c: 141: RD0 = 0;
+  1138  0559  1008               	bcf	8,0	;volatile
+  1139                           
+  1140                           ;WS_Chip.c: 142: RD0 = 0;
+  1141  055A  1008               	bcf	8,0	;volatile
+  1142                           
+  1143                           ;WS_Chip.c: 143: RD0 = 0;
+  1144  055B  1008               	bcf	8,0	;volatile
+  1145                           
+  1146                           ;WS_Chip.c: 144: RD0 = 0;
+  1147  055C  1008               	bcf	8,0	;volatile
+  1148                           
+  1149                           ;WS_Chip.c: 146: RD0 = 1;
+  1150  055D  1408               	bsf	8,0	;volatile
+  1151                           
+  1152                           ;WS_Chip.c: 147: _delay((unsigned long)((1)*(20000000/4000000.0)));
+  1153  055E  2D5F               	nop2	;2 cycle nop
+  1154  055F  2D60               	nop2	;2 cycle nop
+  1155  0560  0000               	nop
+  1156                           
+  1157                           ;WS_Chip.c: 148: }
+  1158  0561  0008               	return
+  1159  0562                     l30:	
+  1160                           
+  1161                           ;WS_Chip.c: 149: else
+  1162                           ;WS_Chip.c: 150: {
+  1163                           ;WS_Chip.c: 151: RD0 = 0;
+  1164  0562  1283               	bcf	3,5	;RP0=0, select bank0
+  1165  0563  1303               	bcf	3,6	;RP1=0, select bank0
+  1166  0564  1008               	bcf	8,0	;volatile
+  1167                           
+  1168                           ;WS_Chip.c: 152: RD0 = 0;
+  1169  0565  1008               	bcf	8,0	;volatile
+  1170                           
+  1171                           ;WS_Chip.c: 153: RD0 = 1;
+  1172  0566  1408               	bsf	8,0	;volatile
+  1173                           
+  1174                           ;WS_Chip.c: 154: _delay((unsigned long)((1)*(20000000/4000000.0)));
+  1175  0567  2D68               	nop2	;2 cycle nop
+  1176  0568  2D69               	nop2	;2 cycle nop
+  1177  0569  0000               	nop
+  1178  056A  0008               	return
+  1179  056B                     __end_of_sendBit:	
+  1180                           
+  1181                           	psect	text5
+  1182  0513                     __ptext5:	
+  1183 ;; *************** function ___bmul *****************
+  1184 ;; Defined at:
+  1185 ;;		line 4 in file "/Applications/microchip/xc8/v1.35/sources/common/Umul8.c"
+  1186 ;; Parameters:    Size  Location     Type
+  1187 ;;  multiplier      1    wreg     unsigned char 
+  1188 ;;  multiplicand    1    0[COMMON] unsigned char 
+  1189 ;; Auto vars:     Size  Location     Type
+  1190 ;;  multiplier      1    3[COMMON] unsigned char 
+  1191 ;;  product         1    2[COMMON] unsigned char 
+  1192 ;; Return value:  Size  Location     Type
+  1193 ;;                  1    wreg      unsigned char 
+  1194 ;; Registers used:
+  1195 ;;		wreg, status,2, status,0
+  1196 ;; Tracked objects:
+  1197 ;;		On entry : 0/0
+  1198 ;;		On exit  : 0/0
+  1199 ;;		Unchanged: 0/0
+  1200 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1201 ;;      Params:         1       0       0       0       0
+  1202 ;;      Locals:         2       0       0       0       0
+  1203 ;;      Temps:          1       0       0       0       0
+  1204 ;;      Totals:         4       0       0       0       0
+  1205 ;;Total ram usage:        4 bytes
+  1206 ;; Hardware stack levels used:    1
+  1207 ;; This function calls:
+  1208 ;;		Nothing
+  1209 ;; This function is called by:
+  1210 ;;		_sendLEDData
+  1211 ;; This function uses a non-reentrant model
+  1212 ;;
+  1213                           
+  1214                           
+  1215                           ;psect for function ___bmul
+  1216  0513                     ___bmul:	
+  1217                           
+  1218                           ;incstack = 0
+  1219                           ; Regs used in ___bmul: [wreg+status,2+status,0]
+  1220                           ;___bmul@multiplier stored from wreg
+  1221  0513  00F4               	movwf	___bmul@multiplier
+  1222  0514  01F3               	clrf	___bmul@product
+  1223  0515                     l957:	
+  1224  0515  1C74               	btfss	___bmul@multiplier,0
+  1225  0516  2D1B               	goto	l961
+  1226  0517  0871               	movf	___bmul@multiplicand,w
+  1227  0518  00F2               	movwf	??___bmul
+  1228  0519  0872               	movf	??___bmul,w
+  1229  051A  07F3               	addwf	___bmul@product,f
+  1230  051B                     l961:	
+  1231  051B  1003               	clrc
+  1232  051C  0DF1               	rlf	___bmul@multiplicand,f
+  1233  051D  1003               	clrc
+  1234  051E  0CF4               	rrf	___bmul@multiplier,f
+  1235  051F  0874               	movf	___bmul@multiplier,w
+  1236  0520  1D03               	btfss	3,2
+  1237  0521  2D15               	goto	l957
+  1238  0522  0873               	movf	___bmul@product,w
+  1239  0523  0008               	return
+  1240  0524                     __end_of___bmul:	
+  1241                           
+  1242                           	psect	text6
+  1243  063A                     __ptext6:	
+  1244 ;; *************** function _initLED *****************
+  1245 ;; Defined at:
+  1246 ;;		line 101 in file "WS_Chip.c"
+  1247 ;; Parameters:    Size  Location     Type
+  1248 ;;		None
+  1249 ;; Auto vars:     Size  Location     Type
+  1250 ;;		None
+  1251 ;; Return value:  Size  Location     Type
+  1252 ;;		None               void
+  1253 ;; Registers used:
+  1254 ;;		status,2, status,0, pclath, cstack
+  1255 ;; Tracked objects:
+  1256 ;;		On entry : 0/0
+  1257 ;;		On exit  : 0/0
+  1258 ;;		Unchanged: 0/0
+  1259 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1260 ;;      Params:         0       0       0       0       0
+  1261 ;;      Locals:         0       0       0       0       0
+  1262 ;;      Temps:          0       0       0       0       0
+  1263 ;;      Totals:         0       0       0       0       0
+  1264 ;;Total ram usage:        0 bytes
+  1265 ;; Hardware stack levels used:    1
+  1266 ;; Hardware stack levels required when called:    1
+  1267 ;; This function calls:
+  1268 ;;		__0
+  1269 ;;		__1
+  1270 ;; This function is called by:
+  1271 ;;		_main
+  1272 ;; This function uses a non-reentrant model
+  1273 ;;
+  1274                           
+  1275                           
+  1276                           ;psect for function _initLED
+  1277  063A                     _initLED:	
+  1278                           
+  1279                           ;WS_Chip.c: 103: _1();
+  1280                           
+  1281                           ;incstack = 0
+  1282                           ; Regs used in _initLED: [status,2+status,0+pclath+cstack]
+  1283  063A  120A  118A  2504  120A  118A  	fcall	__1
+  1284                           
+  1285                           ;WS_Chip.c: 104: _1();
+  1286  063F  120A  118A  2504  120A  118A  	fcall	__1
+  1287                           
+  1288                           ;WS_Chip.c: 105: _1();
+  1289  0644  120A  118A  2504  120A  118A  	fcall	__1
+  1290                           
+  1291                           ;WS_Chip.c: 106: _1();
+  1292  0649  120A  118A  2504  120A  118A  	fcall	__1
+  1293                           
+  1294                           ;WS_Chip.c: 107: _1();
+  1295  064E  120A  118A  2504  120A  118A  	fcall	__1
+  1296                           
+  1297                           ;WS_Chip.c: 108: _1();
+  1298  0653  120A  118A  2504  120A  118A  	fcall	__1
+  1299                           
+  1300                           ;WS_Chip.c: 109: _1();
+  1301  0658  120A  118A  2504  120A  118A  	fcall	__1
+  1302                           
+  1303                           ;WS_Chip.c: 110: _1();
+  1304  065D  120A  118A  2504  120A  118A  	fcall	__1
+  1305                           
+  1306                           ;WS_Chip.c: 112: _1();
+  1307  0662  120A  118A  2504  120A  118A  	fcall	__1
+  1308                           
+  1309                           ;WS_Chip.c: 113: _1();
+  1310  0667  120A  118A  2504  120A  118A  	fcall	__1
+  1311                           
+  1312                           ;WS_Chip.c: 114: _1();
+  1313  066C  120A  118A  2504  120A  118A  	fcall	__1
+  1314                           
+  1315                           ;WS_Chip.c: 115: _1();
+  1316  0671  120A  118A  2504  120A  118A  	fcall	__1
+  1317                           
+  1318                           ;WS_Chip.c: 116: _1();
+  1319  0676  120A  118A  2504  120A  118A  	fcall	__1
+  1320                           
+  1321                           ;WS_Chip.c: 118: _1();
+  1322  067B  120A  118A  2504  120A  118A  	fcall	__1
+  1323                           
+  1324                           ;WS_Chip.c: 119: _1();
+  1325  0680  120A  118A  2504  120A  118A  	fcall	__1
+  1326                           
+  1327                           ;WS_Chip.c: 120: _1();
+  1328  0685  120A  118A  2504  120A  118A  	fcall	__1
+  1329                           
+  1330                           ;WS_Chip.c: 121: _1();
+  1331  068A  120A  118A  2504  120A  118A  	fcall	__1
+  1332                           
+  1333                           ;WS_Chip.c: 122: _1();
+  1334  068F  120A  118A  2504  120A  118A  	fcall	__1
+  1335                           
+  1336                           ;WS_Chip.c: 124: _1();
+  1337  0694  120A  118A  2504  120A  118A  	fcall	__1
+  1338                           
+  1339                           ;WS_Chip.c: 125: _1();
+  1340  0699  120A  118A  2504  120A  118A  	fcall	__1
+  1341                           
+  1342                           ;WS_Chip.c: 126: _1();
+  1343  069E  120A  118A  2504  120A  118A  	fcall	__1
+  1344                           
+  1345                           ;WS_Chip.c: 127: _1();
+  1346  06A3  120A  118A  2504  120A  118A  	fcall	__1
+  1347                           
+  1348                           ;WS_Chip.c: 128: _1();
+  1349  06A8  120A  118A  2504  120A  118A  	fcall	__1
+  1350                           
+  1351                           ;WS_Chip.c: 130: _0();
+  1352  06AD  120A  118A  24FB   	fcall	__0
+  1353  06B0  0008               	return
+  1354  06B1                     __end_of_initLED:	
+  1355                           
+  1356                           	psect	text7
+  1357  0504                     __ptext7:	
+  1358 ;; *************** function __1 *****************
+  1359 ;; Defined at:
+  1360 ;;		line 86 in file "WS_Chip.c"
+  1361 ;; Parameters:    Size  Location     Type
+  1362 ;;		None
+  1363 ;; Auto vars:     Size  Location     Type
+  1364 ;;		None
+  1365 ;; Return value:  Size  Location     Type
+  1366 ;;		None               void
+  1367 ;; Registers used:
+  1368 ;;		None
+  1369 ;; Tracked objects:
+  1370 ;;		On entry : 0/0
+  1371 ;;		On exit  : 0/0
+  1372 ;;		Unchanged: 0/0
+  1373 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1374 ;;      Params:         0       0       0       0       0
+  1375 ;;      Locals:         0       0       0       0       0
+  1376 ;;      Temps:          0       0       0       0       0
+  1377 ;;      Totals:         0       0       0       0       0
+  1378 ;;Total ram usage:        0 bytes
+  1379 ;; Hardware stack levels used:    1
+  1380 ;; This function calls:
+  1381 ;;		Nothing
+  1382 ;; This function is called by:
+  1383 ;;		_initLED
+  1384 ;; This function uses a non-reentrant model
+  1385 ;;
+  1386                           
+  1387                           
+  1388                           ;psect for function __1
+  1389  0504                     __1:	
+  1390                           
+  1391                           ;WS_Chip.c: 88: RD0 = 0;
+  1392                           
+  1393                           ;incstack = 0
+  1394                           ; Regs used in __1: []
+  1395  0504  1283               	bcf	3,5	;RP0=0, select bank0
+  1396  0505  1303               	bcf	3,6	;RP1=0, select bank0
+  1397  0506  1008               	bcf	8,0	;volatile
+  1398                           
+  1399                           ;WS_Chip.c: 89: RD0 = 0;
+  1400  0507  1008               	bcf	8,0	;volatile
+  1401                           
+  1402                           ;WS_Chip.c: 90: RD0 = 0;
+  1403  0508  1008               	bcf	8,0	;volatile
+  1404                           
+  1405                           ;WS_Chip.c: 91: RD0 = 0;
+  1406  0509  1008               	bcf	8,0	;volatile
+  1407                           
+  1408                           ;WS_Chip.c: 92: RD0 = 0;
+  1409  050A  1008               	bcf	8,0	;volatile
+  1410                           
+  1411                           ;WS_Chip.c: 93: RD0 = 0;
+  1412  050B  1008               	bcf	8,0	;volatile
+  1413                           
+  1414                           ;WS_Chip.c: 94: RD0 = 0;
+  1415  050C  1008               	bcf	8,0	;volatile
+  1416                           
+  1417                           ;WS_Chip.c: 95: RD0 = 0;
+  1418  050D  1008               	bcf	8,0	;volatile
+  1419                           
+  1420                           ;WS_Chip.c: 97: RD0 = 1;
+  1421  050E  1408               	bsf	8,0	;volatile
+  1422                           
+  1423                           ;WS_Chip.c: 98: _delay((unsigned long)((1)*(20000000/4000000.0)));
+  1424  050F  2D10               	nop2	;2 cycle nop
+  1425  0510  2D11               	nop2	;2 cycle nop
+  1426  0511  0000               	nop
+  1427  0512  0008               	return
+  1428  0513                     __end_of__1:	
+  1429                           
+  1430                           	psect	text8
+  1431  04FB                     __ptext8:	
+  1432 ;; *************** function __0 *****************
+  1433 ;; Defined at:
+  1434 ;;		line 78 in file "WS_Chip.c"
+  1435 ;; Parameters:    Size  Location     Type
+  1436 ;;		None
+  1437 ;; Auto vars:     Size  Location     Type
+  1438 ;;		None
+  1439 ;; Return value:  Size  Location     Type
+  1440 ;;		None               void
+  1441 ;; Registers used:
+  1442 ;;		None
+  1443 ;; Tracked objects:
+  1444 ;;		On entry : 0/0
+  1445 ;;		On exit  : 0/0
+  1446 ;;		Unchanged: 0/0
+  1447 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1448 ;;      Params:         0       0       0       0       0
+  1449 ;;      Locals:         0       0       0       0       0
+  1450 ;;      Temps:          0       0       0       0       0
+  1451 ;;      Totals:         0       0       0       0       0
+  1452 ;;Total ram usage:        0 bytes
+  1453 ;; Hardware stack levels used:    1
+  1454 ;; This function calls:
+  1455 ;;		Nothing
+  1456 ;; This function is called by:
+  1457 ;;		_initLED
+  1458 ;; This function uses a non-reentrant model
+  1459 ;;
+  1460                           
+  1461                           
+  1462                           ;psect for function __0
+  1463  04FB                     __0:	
+  1464                           
+  1465                           ;WS_Chip.c: 80: RD0 = 0;
+  1466                           
+  1467                           ;incstack = 0
+  1468                           ; Regs used in __0: []
+  1469  04FB  1283               	bcf	3,5	;RP0=0, select bank0
+  1470  04FC  1303               	bcf	3,6	;RP1=0, select bank0
+  1471  04FD  1008               	bcf	8,0	;volatile
+  1472                           
+  1473                           ;WS_Chip.c: 81: RD0 = 0;
+  1474  04FE  1008               	bcf	8,0	;volatile
+  1475                           
+  1476                           ;WS_Chip.c: 82: RD0 = 1;
+  1477  04FF  1408               	bsf	8,0	;volatile
+  1478                           
+  1479                           ;WS_Chip.c: 83: _delay((unsigned long)((1)*(20000000/4000000.0)));
+  1480  0500  2D01               	nop2	;2 cycle nop
+  1481  0501  2D02               	nop2	;2 cycle nop
+  1482  0502  0000               	nop
+  1483  0503  0008               	return
+  1484  0504                     __end_of__0:	
+  1485  007E                     btemp	set	126	;btemp
+  1486  007E                     wtemp	set	126
+  1487  007E                     wtemp0	set	126
+  1488  0080                     wtemp1	set	128
+  1489  0082                     wtemp2	set	130
+  1490  0084                     wtemp3	set	132
+  1491  0086                     wtemp4	set	134
+  1492  0088                     wtemp5	set	136
+  1493  007F                     wtemp6	set	127
+  1494  007E                     ttemp	set	126
+  1495  007E                     ttemp0	set	126
+  1496  0081                     ttemp1	set	129
+  1497  0084                     ttemp2	set	132
+  1498  0087                     ttemp3	set	135
+  1499  007F                     ttemp4	set	127
+  1500  007E                     ltemp	set	126
+  1501  007E                     ltemp0	set	126
+  1502  0082                     ltemp1	set	130
+  1503  0086                     ltemp2	set	134
+  1504  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        36
+    BSS         1
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           13     13      13
+    BANK0            80     25      62
+    BANK1            80      0       0
+    BANK3            85      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_sendLEDData
+    _sendLEDData->_sendRGB
+    _sendRGB->___bmul
+
+Critical Paths under _main in BANK0
+
+    _main->_sendLEDData
+    _sendLEDData->_sendRGB
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0    3152
+                                             23 BANK0      2     2      0
+                            _initLED
+                        _sendLEDData
+                            _sendRGB
+                            _wait_ms
+ ---------------------------------------------------------------------------------
+ (1) _wait_ms                                              6     4      2     152
+                                              0 COMMON     6     4      2
+ ---------------------------------------------------------------------------------
+ (1) _sendLEDData                                          8     7      1    1694
+                                              7 COMMON     6     5      1
+                                             22 BANK0      1     1      0
+                             ___bmul
+                            _sendRGB
+ ---------------------------------------------------------------------------------
+ (1) _sendRGB                                             25    23      2    1306
+                                              4 COMMON     3     1      2
+                                              0 BANK0     22    22      0
+                             ___bmul (ARG)
+                            _sendBit
+ ---------------------------------------------------------------------------------
+ (2) _sendBit                                              1     1      0      22
+                                              0 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ (2) ___bmul                                               4     3      1     170
+                                              0 COMMON     4     3      1
+ ---------------------------------------------------------------------------------
+ (1) _initLED                                              0     0      0       0
+                                 __0
+                                 __1
+ ---------------------------------------------------------------------------------
+ (2) __1                                                   0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) __0                                                   0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _initLED
+     __0
+     __1
+   _sendLEDData
+     ___bmul
+     _sendRGB
+       ___bmul (ARG)
+       _sendBit (ARG)
+   _sendRGB
+     ___bmul (ARG)
+     _sendBit (ARG)
+   _wait_ms
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BANK3               55      0       0       9        0.0%
+BITBANK3            55      0       0       8        0.0%
+SFR3                 0      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+BANK2               60      0       0      11        0.0%
+BITBANK2            60      0       0      10        0.0%
+SFR2                 0      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK1            50      0       0       6        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50     19      3E       5       77.5%
+BITBANK0            50      0       0       4        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               D      D       D       1      100.0%
+BITCOMMON            D      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      4B      12        0.0%
+ABS                  0      0      4B       3        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA             100      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.35 build -356382666 
+Symbol Table                                                                                   Sat Oct 31 19:39:52 2015
+
+                      _i 005D                        pc 0002           ___bmul@product 0073  
+            __CFG_CP$OFF 0000                       l30 0562                       l15 0535  
+                     l86 0639                       __0 04FB                       __1 0504  
+                     fsr 0004              __CFG_LVP$ON 0000                      ?__0 0071  
+                    ?__1 0071                      l911 0798                      l903 078A  
+                    l831 0700                      l823 06F2                      l815 06E4  
+                    l807 06D6                      l951 07DE                      l943 07D0  
+                    l935 07C2                      l927 07B4                      l919 07A6  
+                    l871 074C                      l863 073E                      l855 0730  
+                    l847 0722                      l839 070E                      l791 06BA  
+                    l961 051B                      l957 0515                      l981 0592  
+                    l973 054C                      l895 0776                      l887 0768  
+                    l879 075A                      l799 06C8                      _GIE 005F  
+                    _RD0 0040             __CFG_CPD$OFF 0000                      u515 053B  
+                    u537 05EA                      u547 0547                      u557 07EC  
+                    fsr0 0004                      indf 0000             __CFG_FOSC$HS 0000  
+                   ??__0 0071                     ??__1 0071             __CFG_WRT$OFF 0000  
+          __CFG_FCMEN$ON 0000                     _main 05D8                     btemp 007E  
+                   ltemp 007E                     start 0001                     ttemp 007E  
+                   wtemp 007E            __CFG_IESO$OFF 0000        ___bmul@multiplier 0074  
+          __CFG_MCLRE$ON 0000                    ?_main 0071            __CFG_WDTE$OFF 0000  
+        __end_of_initLED 06B1          __end_of_sendRGB 07EF          __end_of_sendBit 056B  
+         __CFG_BOREN$OFF 0000                    pclath 000A                    ltemp0 007E  
+                  ltemp1 0082                    ltemp2 0086                    ltemp3 0080  
+        __end_of_wait_ms 054F             ?_sendLEDData 0078                    ttemp0 007E  
+                  ttemp1 0081                    ttemp2 0084                    ttemp3 0087  
+                  ttemp4 007F                    status 0003                    wtemp0 007E  
+                  wtemp1 0080                    wtemp2 0082                    wtemp3 0084  
+                  wtemp4 0086                    wtemp5 0088                    wtemp6 007F  
+        __initialization 07EF             __end_of_main 063A                   ??_main 005B  
+         sendLEDData@LED 0071                   _TRISD0 0440           __CFG_PWRTE$OFF 0000  
+                 ___bmul 0513                ??_initLED 0071                ??_sendRGB 0077  
+              ??_sendBit 0071                ??_wait_ms 0073  __end_of__initialization 07FC  
+    ___bmul@multiplicand 0071           __pcstackCOMMON 0071             __pidataBANK0 056B  
+             __end_of__0 0504               __end_of__1 0513              sendRGB@blue 0076  
+             __pbssBANK0 005D     __size_of_sendLEDData 0049               __pmaintext 05D8  
+                ?___bmul 0071                  _LEDData 0020          __size_of___bmul 0011  
+                __ptext1 0535                  __ptext2 058F                  __ptext3 06B1  
+                __ptext4 054F                  __ptext5 0513                  __ptext6 063A  
+                __ptext7 0504                  __ptext8 04FB                  _initLED 063A  
+             _sendRGB$50 0048               _sendRGB$51 0049               _sendRGB$60 0052  
+             _sendRGB$52 004A               _sendRGB$61 0053               _sendRGB$53 004B  
+             _sendRGB$62 0054               _sendRGB$54 004C               _sendRGB$46 0044  
+             _sendRGB$63 0055               _sendRGB$55 004D               _sendRGB$47 0045  
+             _sendRGB$64 0056               _sendRGB$56 004E               _sendRGB$48 0046  
+             _sendRGB$65 0057               _sendRGB$57 004F               _sendRGB$49 0047  
+             _sendRGB$66 0058               _sendRGB$58 0050               _sendRGB$59 0051  
+                _sendRGB 06B1                  _sendBit 054F                  _wait_ms 0535  
+   end_of_initialization 07FC              wait_ms@time 0071             sendLEDData@i 005A  
+         __end_of___bmul 0524      start_initialization 07EF             sendRGB@green 0075  
+               ??___bmul 0072               init_fetch0 0524              __pdataBANK0 0020  
+              ___latbits 0002            __pcstackBANK0 0044               sendRGB@red 0059  
+          ??_sendLEDData 0079                 ?_initLED 0071                 ?_sendRGB 0075  
+               ?_sendBit 0071                 ?_wait_ms 0071              __size_of__0 0009  
+            __size_of__1 000F      __end_of_sendLEDData 05D8     sendLEDData@LEDNumber 0078  
+              sendBit@HL 0071         __size_of_initLED 0077         __size_of_sendRGB 013E  
+       __size_of_sendBit 001C        __CFG_BOR4V$BOR40V 0000         __size_of_wait_ms 001A  
+            _sendLEDData 058F            __size_of_main 0062                wait_ms@Ti 0075  
+               init_ram0 0528  
